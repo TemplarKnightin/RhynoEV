@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Google Fonts API for Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+/* For Slick Carousel */
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+body {
+  @apply font-sans bg-white-400 m-0 p-0 box-border text-white;
+  font-family: 'Calibri', 'Helvetica Neue', Arial, sans-serif;
+}
+
+a {
+  @apply no-underline text-inherit;
+}
+
+/* Apply background color to the active card */
+.slick-slide.slick-active .feature-card {
+  background-color: #FFF225;
+  opacity: 100;
+  min-height: 30rem;
+  /* bg-yellow-600 */
+}
+
+/* Style for all cards */
+.feature-card {
+  transition: all 300ms ease-in-out;
+}
+
+@media screen and (max-width: 768px) {
+  .feature-card {
+    height: 10rem;
+  }
+  .slick-slide.slick-active .feature-card {
+    height: 10rem;
+  }
+}
